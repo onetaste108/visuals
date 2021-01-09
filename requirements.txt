@@ -1,0 +1,6 @@
+numpy
+Pillow
+imageio
+imageio-ffmpeg
+scipy
+scikit-image
