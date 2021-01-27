@@ -29,6 +29,11 @@ def zoom(img, scale=4):
   img = np.repeat(img, scale, 1)
   return img
 
+def norm(img):
+    min_ = np.min(img)
+    max_ = np.max(img)
+    return (img-min_) / (max_-min_)
+
 def scale(img, scale):
     return size(img, [img.shape[0]*scale, img.shape[1]*scale])
 
