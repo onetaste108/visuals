@@ -91,6 +91,10 @@ class Video:
     def __exit__(self, *kw):
         self.close()
         self.show()
+    def __del__(self):
+        self.close()
+        self.show()
+        
     def show(self):
         try:
             if os.path.splitext(self.uri)[-1].lower() == ".gif":
